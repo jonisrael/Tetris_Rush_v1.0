@@ -1302,7 +1302,7 @@ def main():
                         buffer += 4
                     elif lines_cleared == 4: 
                         green_score = 800 * level
-                        buffer += 5
+                        buffer += 6
                     if buffer > 6:
                         buffer = 6
             else:
