@@ -61,9 +61,9 @@ NEW FEATURES!!!!!:
     - Added statistics for Classic Mode based on what completely random pieces are generated, by both number and percentage
     - Added Tetris Rate or Safety Buffer for classic/modern respectively (number of quad clears / total_lines_cleared), and safety buffer counter 
 
-=======================
- BUGS & FUTURE CHANGES
-=======================
+===================
+ 
+BUGS & FUTURE CHANGES
 
 Known Bugs:
   - Wall-kicks still are not perfect, particularly with T-spins.  It will still fail to rotate sometimes.  Help me by looking at the rotate() function!  The SRS rotation system should match this: https://tetris.fandom.com/wiki/SRS
