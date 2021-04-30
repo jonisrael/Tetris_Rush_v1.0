@@ -7,9 +7,9 @@ Uses a freeCodeCamp Tetris template from the video https://youtu.be/zfvxp7PgQ6c
 The purpose is to create a program that can play both the original early versions of NTSC Tetris (NES Tetris, Gameboy Tetris), as well as a modern tetris minigame using physics from most tetris games after 2006. More specifically, it uses the "Tetris guideline" https://tetris.fandom.com/wiki/Tetris_Guideline.  This recreation is not perfect and the code is a mess, but I did my best spending a couple hundred hours on this!  I will improve these changes over time, but I needed to finally release at least some sort of finished project.
 
 
-==========================================================
-                   VERSION DIFFERENCES
-==========================================================
+=====================
+ VERSION DIFFERENCES
+=====================
 
 
 TL:DR Classic Tetris Rules:
@@ -30,9 +30,9 @@ TL:DR Modern Tetris Rules:
 MODERN TETRIS MINIGAME RULES:
   - After 15 seconds of setting up a tetris field, the player will be trying to clear garbage that rises from the bottom.  The more lines that are cleared, the more time the player has to place pieces without garbage rising.  There is a max "buffer" of 6, and every time a piece is placed, it goes down one.  When you clear lines, it goes up one, two, three, or five based on if you get a single, double, triple, or quad clear, respectively.  When the buffer hits one or zero, the field starts blinking red, warning the player that when the buffer hits zero the garbage will start rising.
   - 
-==========================================================
-                       CHANGES
-==========================================================
+=========
+ CHANGES
+=========
 
 CRITICAL BUG FIXES (Things that caused the freeCodeCamp original program to not work correctly):
   - Fixed a line clear calculation bug when clearing three or four lines with non-cleared line(s) in-between. (Hardest and most important bug to fix)
@@ -62,9 +62,13 @@ What I added within the last five months (Not necessarily in order):
     - Added statistics for Classic Mode based on what completely random pieces are generated, by both number and percentage
     - Added Tetris Rate or Safety Buffer for classic/modern respectively (number of quad clears / total_lines_cleared), and safety buffer counter 
 
+=======================
+ BUGS & FUTURE CHANGES
+=======================
+
 Known Bugs:
   - Wall-kicks still are not perfect, particularly with T-spins.  It will still fail to rotate sometimes.  Help me by looking at the rotate() function!  The SRS rotation system should match this: https://tetris.fandom.com/wiki/SRS
-  - When holding left or right and then rotating, pieces sometimes move a lot further to the left or right than they are supposed to.
+  - When holding left or right until you're in auto-repeat, and then rotating, pieces sometimes move a lot further to the left or right than they are supposed to.
   - There are ways to create a situation where you can have infinite rotations in the modern version of tetris
   - Somehow, I need to find a way to not use pygame.time.delay(), as it causes problems of dropping "invisible" pieces if hard dropping too fast (these pieces have a color value of (1,1,1) and are used for a lot of functions, such as the classic-mode piece spawn delay).
 
