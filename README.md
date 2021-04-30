@@ -42,7 +42,7 @@ CRITICAL BUG FIXES (Things that caused the freeCodeCamp original program to not 
 
 
 
-What I added within the last five months (Not necessarily in order):
+NEW FEATURES!!!!!:
   - Added two different game-modes with different mechanics, scoring, and game objectives.
   - Added counterclockwise rotation
   - Added a ghost piece (location where the piece will drop), which does not interact with the grid other than for information.  This was the hardest thing to program.
